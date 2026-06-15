@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/images/logo.png" 
+              src="public/Logo.jpg" 
               alt="12 Links Logo" 
               className="w-7 h-7 object-contain transition-transform group-hover:scale-105" 
             />
