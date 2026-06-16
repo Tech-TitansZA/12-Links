@@ -10,11 +10,11 @@ export default function Footer() {
             
             {/* ── Logo Block ── */}
             <div className="flex items-center gap-3 mb-4">
-              <img 
-  src="/public/Logo.jpg" 
-  alt="12 Links Logo" 
-  className="w-7 h-7 object-contain" 
-/>
+               <img 
+            src="/Logo.jpg" 
+              alt="12 Links Logo" 
+              className="w-9 h-9 object-contain transition-transform group-hover:scale-105" 
+            />
               <span className="text-3xl font-bold tracking-tighter text-white block">
                 12<span className="text-[#00FF88]">Links</span>
               </span>
