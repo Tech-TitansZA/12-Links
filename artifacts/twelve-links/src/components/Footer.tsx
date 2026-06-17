@@ -98,23 +98,27 @@ export default function Footer() {
     <button 
       type="button" 
       onClick={() => {
+        const w = window as any;
+        
         // 1. Inject the Webpushr script immediately if it hasn't loaded yet
-        if (!window.webpushr) {
-          window.webpushr = window.webpushr || function() { (window.webpushr.q = window.webpushr.q || []).push(arguments); };
+        if (!w.webpushr) {
+          w.webpushr = w.webpushr || function() { (w.webpushr.q = w.webpushr.q || []).push(arguments); };
           const js = document.createElement("script");
           js.async = true;
           js.src = "https://cdn.webpushr.com/app.min.js";
           document.head.appendChild(js);
-          window.webpushr('setup', {'key': 'BPdDd3iPbNoUtUJjQMXFt59J5nevtVku6Jtw67QVfxPV7ozzo2tdUIPEO9Z5t2U3hqBZSGQpCLz4Yp4G4MxYpiM'});
+          w.webpushr('setup', {'key': 'BPdDd3iPbNoUtUJjQMXFt59J5nevtVku6Jtw67QVfxPV7ozzo2tdUIPEO9Z5t2U3hqBZSGQpCLz4Yp4G4MxYpiM'});
         }
 
-        // 2. Grab the input text value and trigger the alert
-        const emailEl = document.getElementById('webpushr-email-input') as HTMLInputElement;
+        // 2. Grab the input text value and trigger the alert safely
+        const emailEl = document.getElementById('webpushr-email-input') as any;
         if (emailEl && emailEl.value) {
-          window.webpushr('email', emailEl.value);
+          w.webpushr('email', emailEl.value);
         }
         
-        window.webpushr('showPrompt');
+        if (typeof w.webpushr === 'function') {
+          w.webpushr('showPrompt');
+        }
       }}
       className="bg-[#00FF88] text-black px-4 py-2 rounded-md text-sm font-bold uppercase hover:bg-[#00FF88]/80 transition-colors shrink-0"
     >
