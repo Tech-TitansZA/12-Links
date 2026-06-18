@@ -113,6 +113,35 @@ export default function SubscriptionForm() {
 
   return (
     <div>
+    import { useEffect } from "react";
+
+export default function SubscriptionForm() {
+  useEffect(() => {
+    // This safely injects Webpushr without triggering any strict compiler errors
+    if (typeof window !== "undefined" && !("webpushr" in window)) {
+      const w = window as any;
+      w.webpushr = w.webpushr || function () {
+        (w.webpushr.q = w.webpushr.q || []).push(arguments);
+      };
+      
+      const js = document.createElement("script");
+      js.id = "webpushr-jssdk";
+      js.async = true;
+      js.src = "https://cdn.webpushr.com/app.min.js";
+      
+      const firstScript = document.getElementsByTagName("script")[0];
+      if (firstScript && firstScript.parentNode) {
+        firstScript.parentNode.insertBefore(js, firstScript);
+      } else {
+        document.head.appendChild(js);
+      }
+      
+      w.webpushr('setup', { 'key': 'BPdDd3iPbNoUtUJjQMXFt59J5nevtVku6Jtw67QVfxPV7ozzo2tdUIPEO9Z5t2U3hqBZSGQpCLz4Yp4G4MxYpiM' });
+    }
+  }, []);
+
+  return (
+    <div>
       {/* ── Subscription Form ── */}
       <div>
         <h4 className="text-white font-bold mb-6">Subscribe</h4>
@@ -150,7 +179,6 @@ export default function SubscriptionForm() {
     </div>
   );
 }
-        
         {/* ── Bottom Info Bar ── */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
           <p>© 2026 12 Links. All rights reserved.</p>
