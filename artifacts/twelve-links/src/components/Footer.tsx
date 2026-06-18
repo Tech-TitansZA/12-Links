@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span className="text-[#FFB800]">Proudly South African</span>
             <span className="hidden sm:inline">|</span>
-            <span>Johannesburg, ZA</span>
+            <span>Pretoria, ZA</span>
           </div>
           
           <div className="flex gap-4 relative z-20">
