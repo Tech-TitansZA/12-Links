@@ -74,7 +74,7 @@ export default function About() {
           <span className="hidden md:inline text-gray-600">|</span>
           <span>End-to-End Delivery</span>
           <span className="hidden md:inline text-gray-600">|</span>
-          <span>Johannesburg, SA</span>
+          <span>Pretoria, SA</span>
         </div>
       </div>
 
