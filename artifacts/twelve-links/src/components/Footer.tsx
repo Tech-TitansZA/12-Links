@@ -122,23 +122,17 @@ export default function Footer() {
     
     if (emailInput && emailInput.value) {
       const emailValue = emailInput.value;
-      
-      // We wrap the calls in a try/catch block and use string execution 
-      // This completely stops Vite's dev overlay plugin from listening to or crashing on this action
-      try {
-        const w = window as any;
-        if (w.webpushr) {
-          // Force string evaluation so Vite's runtime parser ignores the execution call entirely
-          eval(`window.webpushr('email', "${emailValue}"); window.webpushr('showPrompt');`);
-        } else if ('Notification' in window) {
-          Notification.requestPermission().then(() => {
-            if (window.hasOwnProperty('webpushr')) {
-              eval(`window.webpushr('email', "${emailValue}");`);
-            }
-          });
-        }
-      } catch (err) {
-        console.log("Webpushr initialized quietly:", err);
+      const w = window as any;
+
+      if (w.webpushr && typeof w.webpushr === "function") {
+        w.webpushr('email', emailValue);
+        w.webpushr('showPrompt');
+      } else if ('Notification' in window) {
+        Notification.requestPermission().then(() => {
+          if (w.webpushr && typeof w.webpushr === "function") {
+            w.webpushr('email', emailValue);
+          }
+        });
       }
     }
   }}
