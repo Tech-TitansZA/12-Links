@@ -179,7 +179,7 @@ export default function Footer() {
                     </div>
                     <div className="space-y-2">
                       <h4 className="text-white font-bold font-mono text-xs tracking-wider text-[#00FF88] uppercase">5. Your Data Rights</h4>
-                      <p>Under POPIA regulations, you retain explicit rights to inspect your active records, request architectural updates to inaccurate listings, or demand total deletion from our active repositories. Direct all compliance parameters to <span className="text-[#00FF88] underline">info@twelvelinks.co.za</span>.</p>
+                      <p>Under POPIA regulations, you retain explicit rights to inspect your active records, request architectural updates to inaccurate listings, or demand total deletion from our active repositories. Direct all compliance parameters to <span className="text-[#00FF88] underline">info@12links.co.za</span>.</p>
                     </div>
                   </>
                 ) : (
