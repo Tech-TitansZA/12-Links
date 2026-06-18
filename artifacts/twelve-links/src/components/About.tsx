@@ -7,7 +7,7 @@ export default function About() {
   const [storyExpanded, setStoryExpanded] = useState(false);
 
   const team = [
-    { name: "Nkotwane N.", role: "Data Scientist & CEO", bio: "Visionary leader driving Africa's tech revolution, leveraging data science to bridge the gap between potential and opportunity.", color: "from-green-500 to-emerald-700" , image: "/team/tebello.jpg" },
+    { name: "Mohohoma M.", role: "Data Scientist & CEO", bio: "Visionary leader driving Africa's tech revolution, leveraging data science to bridge the gap between potential and opportunity.", color: "from-green-500 to-emerald-700" , image: "/team/tebello.jpg" },
     { name: "Ngwenya N.", role: "AI Engineer & CTO", bio: "Architect of scalable systems, designing the intelligent models and technical backbone of the 12 Links platform.", color: "from-yellow-400 to-orange-600" , image: "/team/nkosinathi-ngwenya.jpeg" },
     { name: "Mpoka J.", role: "Software Engineer & Project Lead", bio: "Guiding the development lifecycle and crafting intuitive, high-performance user interfaces that bring product vision to life.", color: "from-blue-500 to-indigo-700" , image: "/team/jacky-mpoka.jpeg" },
     { name: "Mageza L.", role: "Cybersecurity Engineer", bio: "Securing the platform's infrastructure, mitigating vulnerabilities, and protecting core user data from modern cyber threats.", color: "from-purple-500 to-violet-700" , image: "/team/lesego-mageza.jpeg" },
