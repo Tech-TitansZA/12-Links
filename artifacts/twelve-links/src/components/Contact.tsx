@@ -394,7 +394,7 @@ export default function Contact() {
             <div className="bg-card border border-white/5 p-8 rounded-2xl">
               <h3 className="text-xl font-bold text-white mb-6">Contact Details</h3>
               <div className="space-y-4 text-gray-400 font-mono text-sm">
-                <p><span className="text-[#00FF88]">Email:</span> 12links.co.za</p>
+                <p><span className="text-[#00FF88]">Email:</span> info@12links.co.za</p>
                 <p><span className="text-[#00FF88]">HQ:</span> Johannesburg, South Africa</p>
                 <p><span className="text-[#00FF88]">Response:</span> Within 24 hours</p>
                 <p><span className="text-[#00FF88]">Coverage:</span> Pan-African, Global</p>
@@ -405,10 +405,10 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-white mb-6">How We Engage</h3>
               <ul className="space-y-6">
                 {[
-                  { num: "01", title: "Submit Request", desc: "Fill out the form with your project details." },
-                  { num: "02", title: "Consultation", desc: "Our team reviews and schedules a discovery call." },
-                  { num: "03", title: "Proposal", desc: "Receive a tailored proposal within 24 hours." },
-                  { num: "04", title: "Launch", desc: "We assemble the team and kick off your project." },
+                  { num: "01", title: "Project Scope", desc: "Share your product vision and system requirements through our intake framework." },
+                  { num: "02", title: "Discovery Strategy", desc: "Our engineering directors align on your scope and initiate a technical consultation." },
+                  { num: "03", title: "Technical Blueprint", desc: "Receive a transparent, line-item deployment architecture proposal within 24 hours." },
+                  { num: "04", title: "Pod Deployment", desc: "We clear your onboarding queue, assign dedicated engineers, and initialize sprint zero." },
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="text-[#FFB800] font-mono font-bold mt-1 shrink-0">{step.num}</span>
