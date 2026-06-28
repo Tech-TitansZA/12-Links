@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Twitter, Github, X, ShieldCheck, FileText } from "lucide-react";
+import { Linkedin,Twitter, X, Github, ShieldCheck, FileText } from "lucide-react";
 
 export default function Footer() {
   const [activeDoc, setActiveDoc] = useState<"privacy" | "terms" | null>(null);
@@ -42,7 +42,7 @@ export default function Footer() {
             
             {/* Social Icons */}
             <div className="flex gap-4">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
+              <a href="https://www.linkedin.com/in/twelve-links-464b553bb/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-4 h-4" />
               </a>
@@ -50,7 +50,7 @@ export default function Footer() {
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
+              <a href="https://github.com/12Links/12-Links" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-4 h-4" />
               </a>
