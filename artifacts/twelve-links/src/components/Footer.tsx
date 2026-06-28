@@ -22,9 +22,9 @@ export default function Footer() {
     <footer className="bg-card border-t border-white/10 pt-16 pb-8 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
+          
+          {/* ── Brand Description Block ── */}
           <div className="md:col-span-2">
-            
-            {/* ── Logo Block ── */}
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/12links_logo.svg" 
@@ -40,91 +40,58 @@ export default function Footer() {
               Connecting Africa's tech talent with global opportunities. The future of technology delivery.
             </p>
             
-            {/* ── Real Social Icons ── */}
+            {/* Social Icons */}
             <div className="flex gap-4">
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a 
-                href="https://x.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105"
-              >
+              <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-4 h-4" />
               </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105"
-              >
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 transition-all hover:scale-105">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-4 h-4" />
               </a>
             </div>
           </div>
           
-          {/* ── Navigation Links ── */}
+          {/* ── Navigation Links Column ── */}
           <div>
             <h4 className="text-white font-bold mb-6">Navigation</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li><Link href="/" className="hover:text-[#00FF88] transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-[#00FF88] transition-colors">About</Link></li>
               <li><Link href="/services" className="hover:text-[#00FF88] transition-colors">Services</Link></li>
-              <li><Link href="/industries" className="hover:text-[#00FF88] transition-colors">Interdustries</Link></li>
+              <li><Link href="/industries" className="hover:text-[#00FF88] transition-colors">Industries</Link></li>
               <li><Link href="/contact" className="hover:text-[#00FF88] transition-colors">Contact</Link></li>
             </ul>
           </div>
-          
-          {/* ── Subscription Form ── */}
-          <div>
-            <h4 className="text-white font-bold mb-6">Subscribe</h4>
-            <p className="text-gray-400 text-sm mb-4">Get updates on our platform and opportunities.</p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Email address" 
-                className="bg-background border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00FF88]/50 w-full" 
-              />
-              <button 
-                type="button" 
-                className="bg-[#00FF88] text-black px-4 py-2 rounded-md text-sm font-bold uppercase hover:bg-[#00FF88]/80 transition-colors shrink-0"
-              >
-                Join
-              </button>
-            </div>
-          </div>
+
+          <div className="hidden md:block" />
         </div>
-        
+
         {/* ── Bottom Info Bar ── */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
           <p>© 2026 12 Links. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="text-[#FFB800]">Proudly South African</span>
             <span className="hidden sm:inline">|</span>
-            <span>Johannesburg, ZA</span>
+            <span>Pretoria, ZA</span>
           </div>
           
-          {/* ── SEPARATED BUTTONS WITH HIGHER LAYERING ── */}
           <div className="flex gap-4 relative z-20">
             <button 
               type="button"
-              onClick={() => { console.log("Privacy clicked"); setActiveDoc("privacy"); }}
+              onClick={() => setActiveDoc("privacy")}
               className="text-gray-400 hover:text-[#00FF88] transition-colors cursor-pointer text-left focus:outline-none py-1 px-2"
             >
               Privacy Policy
             </button>
             <button 
               type="button"
-              onClick={() => { console.log("Terms clicked"); setActiveDoc("terms"); }}
+              onClick={() => setActiveDoc("terms")}
               className="text-gray-400 hover:text-[#00FF88] transition-colors cursor-pointer text-left focus:outline-none py-1 px-2"
             >
               Terms of Service
@@ -133,12 +100,12 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── FIXED FORCE-ISOLATED FULL-SCREEN OVERLAY VIA HIGHEST Z-INDEX LAYER ── */}
+      {/* ── FORCE-ISOLATED FULL-SCREEN OVERLAY ── */}
       <AnimatePresence mode="wait">
         {activeDoc && (
-          <div className="fixed inset-0 z-[99999] flex justify-end overflow-hidden">
+          <div className="fixed inset-0 z-[99999] flex justify-end overflow-hidden h-screen max-h-screen">
             
-            {/* Backdrop Blur Layer */}
+            {/* Backdrop Layer */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -153,14 +120,14 @@ export default function Footer() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.35, ease: "easeInOut" }}
-              className="relative w-full max-w-2xl bg-[#0B0F19] border-l border-white/10 p-6 md:p-10 shadow-2xl overflow-y-auto h-full flex flex-col z-10"
+              className="relative w-full max-w-2xl bg-[#0B0F19] border-l border-white/10 shadow-2xl h-screen max-h-screen flex flex-col z-10 overflow-hidden pt-20 md:pt-24"
             >
-              {/* Drawer Header */}
-              <div className="flex justify-between items-center pb-6 border-b border-white/5 mb-8">
+              {/* FIXED STICKY HEADER FRAME (Pushed down safely by layout padding) */}
+              <div className="flex justify-between items-center px-6 md:px-10 pb-6 border-b border-white/5 bg-[#0B0F19] shrink-0 w-full">
                 <div className="flex items-center gap-3">
                   {activeDoc === "privacy" ? (
                     <>
-                      <ShieldCheck className="w-6 h-6 text-[#00FF88]" />
+                      <ShieldCheck className="w-6 h-6 text-[#00FF88] shrink-0" />
                       <div>
                         <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">Privacy Policy</h3>
                         <p className="text-xs text-gray-500 font-mono">POPIA Compliant • June 2026</p>
@@ -168,7 +135,7 @@ export default function Footer() {
                     </>
                   ) : (
                     <>
-                      <FileText className="w-6 h-6 text-[#FFB800]" />
+                      <FileText className="w-6 h-6 text-[#FFB800] shrink-0" />
                       <div>
                         <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">Terms of Service</h3>
                         <p className="text-xs text-gray-500 font-mono">Service Terms • June 2026</p>
@@ -180,14 +147,15 @@ export default function Footer() {
                 <button 
                   type="button"
                   onClick={() => setActiveDoc(null)}
-                  className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white rounded-full transition-all cursor-pointer"
+                  className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white rounded-full transition-all cursor-pointer focus:outline-none shrink-0 ml-4"
+                  aria-label="Close document"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Legal Document Content */}
-              <div className="flex-1 text-gray-300 space-y-6 text-sm font-light leading-relaxed pr-2 overflow-y-auto">
+              {/* ISOLATED SCROLLABLE CONTENT AREA */}
+              <div className="flex-1 overflow-y-auto px-6 md:px-10 py-6 text-gray-300 space-y-6 text-sm font-light leading-relaxed">
                 {activeDoc === "privacy" ? (
                   <>
                     <p className="italic text-gray-400 bg-white/5 p-4 rounded-lg border border-white/5">
@@ -211,7 +179,7 @@ export default function Footer() {
                     </div>
                     <div className="space-y-2">
                       <h4 className="text-white font-bold font-mono text-xs tracking-wider text-[#00FF88] uppercase">5. Your Data Rights</h4>
-                      <p>Under POPIA regulations, you retain explicit rights to inspect your active records, request architectural updates to inaccurate listings, or demand total deletion from our active repositories. Direct all compliance parameters to <span className="text-[#00FF88] underline">info@twelvelinks.co.za</span>.</p>
+                      <p>Under POPIA regulations, you retain explicit rights to inspect your active records, request architectural updates to inaccurate listings, or demand total deletion from our active repositories. Direct all compliance parameters to <span className="text-[#00FF88] underline">info@12links.co.za</span>.</p>
                     </div>
                   </>
                 ) : (
@@ -243,12 +211,12 @@ export default function Footer() {
                 )}
               </div>
 
-              {/* Drawer Bottom Action */}
-              <div className="pt-6 border-t border-white/5 mt-8 flex justify-end">
+              {/* FIXED STICKY BOTTOM ACTION */}
+              <div className="p-6 md:p-10 pt-6 border-t border-white/5 bg-[#0B0F19] flex justify-end shrink-0 w-full mb-4">
                 <button
                   type="button"
                   onClick={() => setActiveDoc(null)}
-                  className="px-6 py-3 bg-[#00FF88] hover:bg-[#00FF88]/90 text-black font-mono font-bold tracking-wider rounded text-xs uppercase transition-all cursor-pointer"
+                  className="px-6 py-3 bg-[#00FF88] hover:bg-[#00FF88]/90 text-black font-mono font-bold tracking-wider rounded text-xs uppercase transition-all cursor-pointer focus:outline-none"
                 >
                   Accept Terms
                 </button>
